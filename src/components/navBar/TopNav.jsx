@@ -3,8 +3,10 @@ import Link from 'next/link'
 import React from 'react'
 import { GiMatchTip } from 'react-icons/gi'
 import NavLink from './NavLink'
+import { auth } from '@/auth'
 
-export default function TopNav() {
+export default async function TopNav() {
+  const session = await auth();
   return (
     <Navbar
       maxWidth='xl'
