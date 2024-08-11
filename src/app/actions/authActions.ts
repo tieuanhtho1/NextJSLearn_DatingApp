@@ -84,7 +84,7 @@ export async function getUserById(id:string) {
     })
 }
 
-async function getAuthUserId() {
+export async function getAuthUserId() {
     const session = await auth();
     const userId = session?.user?.id;
 
